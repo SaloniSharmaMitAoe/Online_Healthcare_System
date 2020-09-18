@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 5px;
+  background: white;
+}
+
+.header {
+  padding: 5px;
+  text-align: center;
+  background: white;
+  color: red;
+  font-family: "comic sans";
+}
+
+h3 {
+  color: red;
+  font-size: 30px;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: black;
+  position: -webkit-sticky;
+  top: 0;
+  width: 100%;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: "times new roman";
+  font-size: 25px;
+}
+
+.topnav a:hover {
+  background-color: red;
+}
+
+.leftcolumn {
+  text-align: center;
+  float: left;
+  width: 75%;
+}
+
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+.card {
+  background-color: #63C5DA;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.leftcolumnfooter {
+  text-align: center;
+  float: left;
+  width: 50%;
+}
+
+.rightcolumnfooter {
+  float: left;
+  width: 50%;
+  padding-left: 20px;
+}
+.cardfooter {
+  background-color: black;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer {
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: "times new roman";
+  font-size: 25px;
+  margin-top: 10px;
+  background-color: black;
+  text-decoration: none;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  height: 150px;
+}
+</style>
+<title>healthcare.com</title>
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css">
+<link rel="stylesheet" type="text/css" href="formstyle.css">
+<script src="healthcarescript.js"></script>
+</head>
+<body>
+
+<div class="header" style="background:black">
+  <h1><big>ONLINE HEALTHCARE SYSTEM</big></h1>
+</div>
+
+<div class="topnav">
+  <a href="index.html">HOME</a>
+  <a href="signup.html">SIGN-UP</a>
+</div>
+
+<div class="card">
+<div id="login-box">
+  <div class="left">
+    <h1>Sign up</h1>
+      <form name="myform" method="post" action="" onclick="return validateForm()">
+        <input type="text" name="username" placeholder="Username" />
+        <span id="nam1"></span><br/><br/>
+        <input type="text" name="email" placeholder="E-mail" />
+        <span id="mail"></span><br/><br/>
+        <input type="password" name="password" placeholder="Password" />
+        <span id="pword"></span><br/><br/>
+        <input type="password" name="password2" placeholder="Retype password" />
+        <span id="cpword"></span><br/><br/>
+        <input type="text" name="mobile" placeholder="Mobile Number" />
+        <span id="contact"></span><br/><br/>
+        Role<select type="text" id="role" name="role" placeholder="Role">
+             <option></option>
+             <option>Doctor</option>
+             <option>User</option>
+        </select>
+        <input type="submit" id="entry" name="signup_submit" value="Sign me up" onclick="cl()" />
+      </form>
+  </div>
+
+  <div class="right">
+    <span class="loginwith" style="color:black">Sign in with<br />social network</span>
+    <button class="social-signin facebook" onclick="window.location.href='https://facebook.com';">Log in with facebook</button>
+    <button class="social-signin twitter" onclick="window.location.href='https://twitter.com';">Log in with Twitter</button>
+    <button class="social-signin google" onclick="window.location.href='https://accounts.google.com';">Log in with Google+</button>
+    <br/><br/><br/><br/><br/><span class="loginwith" style="color:black">Already a Member?</span>
+    <form name="myform" method="post" action="">
+      <input type="text" name="email" placeholder="E-mail" />
+      <input type="password" name="password" placeholder="Password" />
+    </form>
+    <input type="submit" id="entry" name="signup_submit" value="Log In" onclick="cl()" />
+
+  </div>
+  <div class="or">OR</div>
+</div>
+</div>
+
+<div class="cardfooter">
+  <div class="row">
+    <div class = "footer">
+      <div class="leftcolumnfooter">
+        <p><big>CONTACT US</big></p>
+        <small><address>
+                      MIT AOE<br>
+                      Alandi,<br>
+                      Pune - 412105<br>
+                      <i class="fa fa-phone"></i>: 9175763282 / 9175763284 / 83292482590<br>
+                      <i class="fa fa-envelope"></i>: <a href="mailto:healthcare@gmail.com">healthcares@gmail.com</a>
+              </address></small>
+        <p><small>&copy2020 healthcare.com</small></p>
+     </div>
+     <div class="rightcolumnfooter">
+       <p><big>FOLLOW US</big></p>
+       <div class="text-center">
+         <small>
+           <div class="leftcolumnfooter" style="text-align:right; padding-right:40px">
+             <a class="btn btn-social-icon btn-google" href="http://google.com/+"><span class="fa fa-google-plus"></span></a><br/><br/>
+             <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><span class="fa fa-facebook"></span></a><br/><br/>
+             <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><span class="fa fa-linkedin"></span></a>
+           </div>
+           <div class="rightcolumnfooter" style="text-align:left; padding-left:40px">
+             <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><span class="fa fa-youtube"></span></a><br/><br/>
+             <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><span class="fa fa-twitter"></span></a><br/><br/>
+             <a class="btn btn-social-icon btn-google" href="mailto:"><span class="fa fa-envelope"></span></a>
+          </div>
+       </small>
+       </div>
+     </div>
+   </div>
+  </div>
+</div>
+
+</body>
+</html>
